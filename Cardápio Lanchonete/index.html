@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete do Burrão - Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Lanchonete do Burrão</h1>
+        <p>Mais gordura e Mais sabor!</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Nosso Cardápio</h2>
+
+            <label for="busca">Pesquisar produto:</label>
+            <input type="text" id="busca" placeholder="Digite o nome do produto">
+
+            <label for="categoria">Filtrar categoria:</label>
+            <select id="categoria">
+                <option value="Todas">Todas</option>
+                <option value="Lanches">Lanches</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Sobremesas">Sobremesas</option>
+            </select>
+
+            <div id="listaProdutos"></div>
+        </section>
+
+        <section>
+            <h2>Cadastrar Produto</h2>
+
+            <form id="formProduto" novalidate>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome">
+
+                <label for="categoriaNova">Categoria:</label>
+                <select id="categoriaNova">
+                    <option value="">Selecione</option>
+                    <option value="Lanches">Lanches</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Sobremesas">Sobremesas</option>
+                </select>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao"></textarea>
+
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco">
+
+                <button type="submit">Cadastrar Produto</button>
+
+                <p id="mensagem"></p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Estatísticas do Cardápio</h2>
+
+            <div id="painel">
+                <p id="total">Total de produtos: 0</p>
+                <p id="disponiveis">Disponíveis: 0</p>
+                <p id="media">Preço médio: —</p>
+                <p id="maiorPreco">Produto mais caro: —</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Lanchonete do Burrão - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
